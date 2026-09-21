@@ -1,65 +1,74 @@
 import { ChapterFrame } from '../components/ui/ChapterFrame'
-import { LessonPin } from '../components/ui/LessonPin'
 import { chapters } from '../data/site'
 
 export function HistoriaPage() {
-  const chapter = chapters.historia
-  return (
-    <ChapterFrame chapter={chapter}>
-      <LessonPin lessons={chapter.lessons} />
-    </ChapterFrame>
-  )
+  return <ChapterFrame chapter={chapters.historia} />
 }
 
 export function TerraPage() {
-  const chapter = chapters.terra
-  return (
-    <ChapterFrame chapter={chapter} inverted>
-      <LessonPin lessons={chapter.lessons} inverted />
-    </ChapterFrame>
-  )
+  return <ChapterFrame chapter={chapters.terra} inverted experience="crop" />
 }
 
 export function RebanhoPage() {
-  const chapter = chapters.rebanho
-  return (
-    <ChapterFrame chapter={chapter}>
-      <LessonPin lessons={chapter.lessons} />
-    </ChapterFrame>
-  )
+  return <ChapterFrame chapter={chapters.rebanho} experience="cattle" />
 }
 
 export function GranjaPage() {
-  const chapter = chapters.granja
-  return (
-    <ChapterFrame chapter={chapter} inverted>
-      <LessonPin lessons={chapter.lessons} inverted />
-    </ChapterFrame>
-  )
+  return <ChapterFrame chapter={chapters.granja} inverted experience="poultry" />
 }
 
 export function ProducaoPage() {
-  const chapter = chapters.producao
-  return (
-    <ChapterFrame chapter={chapter}>
-      <LessonPin lessons={chapter.lessons} />
-    </ChapterFrame>
-  )
+  return <ChapterFrame chapter={chapters.producao} experience="crop" />
+}
+
+export function MetodoPage() {
+  return <ChapterFrame chapter={chapters.metodo} inverted />
+}
+
+export function AguaPage() {
+  return <ChapterFrame chapter={chapters.agua} />
+}
+
+export function MarcaPage() {
+  return <ChapterFrame chapter={chapters.marca} inverted />
 }
 
 export function OrigemPage() {
-  const chapter = chapters.origem
   return (
-    <ChapterFrame chapter={chapter} inverted>
-      <LessonPin lessons={chapter.lessons} inverted />
-      <p className="mt-20">
+    <ChapterFrame chapter={chapters.origem}>
+      <p className="mt-16">
         <a
           href="https://jhenni.com.br"
           target="_blank"
           rel="noreferrer"
           data-cursor="DESCUBRA"
           data-cursor-kind="link"
-          className="link-line hover:link-line-hover text-[11px] tracking-[0.32em] text-gold uppercase"
+          className="font-mono text-[11px] tracking-[0.32em] text-gold uppercase"
+        >
+          → jhenni.com.br
+        </a>
+      </p>
+    </ChapterFrame>
+  )
+}
+
+export function ContatoPage() {
+  return (
+    <ChapterFrame chapter={chapters.contato} inverted>
+      <p className="mt-16 flex flex-wrap gap-8">
+        <a
+          href="mailto:contato@fazendaferrier.com.br"
+          className="font-mono text-[11px] tracking-[0.28em] text-gold uppercase"
+          data-cursor="ENTRAR"
+          data-cursor-kind="link"
+        >
+          contato@fazendaferrier.com.br
+        </a>
+        <a
+          href="https://jhenni.com.br"
+          target="_blank"
+          rel="noreferrer"
+          className="font-mono text-[11px] tracking-[0.28em] text-gold uppercase"
         >
           jhenni.com.br
         </a>

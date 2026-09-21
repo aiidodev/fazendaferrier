@@ -22,7 +22,7 @@ export function SpotlightCard({ children, className }: SpotlightCardProps) {
       ref={ref}
       onMouseMove={onMove}
       className={cn(
-        'group relative overflow-hidden border border-cream/10 bg-forest/40',
+        'beam-card group relative overflow-hidden border border-cream/10 bg-forest/40',
         'before:pointer-events-none before:absolute before:inset-0 before:opacity-0 before:transition-opacity before:duration-500',
         'before:bg-[radial-gradient(420px_circle_at_var(--spot-x)_var(--spot-y),rgba(156,132,84,0.16),transparent_42%)]',
         'hover:before:opacity-100',

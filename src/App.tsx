@@ -3,8 +3,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { RootLayout } from './components/layout/RootLayout'
 import { Preloader } from './components/preloader/Preloader'
 import {
+  AguaPage,
+  ContatoPage,
   GranjaPage,
   HistoriaPage,
+  MarcaPage,
+  MetodoPage,
   OrigemPage,
   ProducaoPage,
   RebanhoPage,
@@ -23,7 +27,11 @@ const router = createBrowserRouter([
       { path: 'rebanho', element: <RebanhoPage /> },
       { path: 'granja', element: <GranjaPage /> },
       { path: 'producao', element: <ProducaoPage /> },
+      { path: 'metodo', element: <MetodoPage /> },
+      { path: 'agua', element: <AguaPage /> },
+      { path: 'marca', element: <MarcaPage /> },
       { path: 'origem', element: <OrigemPage /> },
+      { path: 'contato', element: <ContatoPage /> },
     ],
   },
 ])

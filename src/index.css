@@ -3,6 +3,7 @@
 @theme {
   --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-sans: 'Manrope', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
   --color-forest: #13241c;
   --color-forest-deep: #0b1611;
@@ -113,6 +114,48 @@
 
 @utility animate-marquee {
   animation: marquee 36s linear infinite;
+}
+
+@utility scan {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 2px,
+    rgb(11 22 17 / 0.35) 3px
+  );
+}
+
+@keyframes beam-spin {
+  to {
+    --beam: 360deg;
+  }
+}
+
+@property --beam {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@utility beam-card {
+  isolation: isolate;
+}
+
+.beam-card::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 1px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--beam), transparent 70%, rgb(156 132 84 / 0.85), transparent 85%);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  animation: beam-spin 8s linear infinite;
+  opacity: 0.55;
 }
 
 @media (prefers-reduced-motion: reduce) {
