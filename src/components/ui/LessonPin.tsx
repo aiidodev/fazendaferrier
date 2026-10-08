@@ -44,7 +44,7 @@ export function LessonPin({ lessons, inverted }: LessonPinProps) {
     <div ref={root} className="space-y-20 md:space-y-28">
       {lessons.map((lesson) => (
         <article key={lesson.index} className="js-lesson grid gap-6 md:grid-cols-[120px_1fr] md:gap-16">
-          <p className="font-mono text-[11px] tracking-[0.32em] text-gold uppercase">{lesson.index}</p>
+          <p className="text-[11px] tracking-[0.28em] text-gold uppercase">{lesson.index}</p>
           <div className="max-w-2xl">
             <h3 className="font-display text-3xl leading-tight md:text-4xl">{lesson.title}</h3>
             <p className={`mt-5 text-base leading-[1.75] md:text-[17px] ${inverted ? 'text-sand/85' : 'text-earth'}`}>

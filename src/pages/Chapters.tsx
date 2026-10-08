@@ -6,19 +6,19 @@ export function HistoriaPage() {
 }
 
 export function TerraPage() {
-  return <ChapterFrame chapter={chapters.terra} inverted experience="crop" />
+  return <ChapterFrame chapter={chapters.terra} inverted />
 }
 
 export function RebanhoPage() {
-  return <ChapterFrame chapter={chapters.rebanho} experience="cattle" />
+  return <ChapterFrame chapter={chapters.rebanho} />
 }
 
 export function GranjaPage() {
-  return <ChapterFrame chapter={chapters.granja} inverted experience="poultry" />
+  return <ChapterFrame chapter={chapters.granja} inverted />
 }
 
 export function ProducaoPage() {
-  return <ChapterFrame chapter={chapters.producao} experience="crop" />
+  return <ChapterFrame chapter={chapters.producao} />
 }
 
 export function MetodoPage() {
@@ -43,9 +43,9 @@ export function OrigemPage() {
           rel="noreferrer"
           data-cursor="DESCUBRA"
           data-cursor-kind="link"
-          className="font-mono text-[11px] tracking-[0.32em] text-gold uppercase"
+          className="text-[12px] tracking-[0.22em] text-gold uppercase"
         >
-          → jhenni.com.br
+          jhenni.com.br
         </a>
       </p>
     </ChapterFrame>
@@ -58,7 +58,7 @@ export function ContatoPage() {
       <p className="mt-16 flex flex-wrap gap-8">
         <a
           href="mailto:contato@fazendaferrier.com.br"
-          className="font-mono text-[11px] tracking-[0.28em] text-gold uppercase"
+          className="text-[12px] tracking-[0.2em] text-gold uppercase"
           data-cursor="ENTRAR"
           data-cursor-kind="link"
         >
@@ -68,7 +68,7 @@ export function ContatoPage() {
           href="https://jhenni.com.br"
           target="_blank"
           rel="noreferrer"
-          className="font-mono text-[11px] tracking-[0.28em] text-gold uppercase"
+          className="text-[12px] tracking-[0.2em] text-gold uppercase"
         >
           jhenni.com.br
         </a>

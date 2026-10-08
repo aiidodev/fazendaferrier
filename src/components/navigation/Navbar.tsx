@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import gsap from 'gsap'
-import { Menu, X } from 'lucide-react'
 import { ARCHIVE_LINKS, NAV_LINKS } from '../../data/site'
 import { cn } from '../../utils/cn'
-import { MagneticButton } from '../shared/MagneticButton'
 import { BrandMark } from '../brand/BrandMark'
 
 export function Navbar() {
@@ -12,7 +10,6 @@ export function Navbar() {
   const home = pathname === '/'
   const [scrolled, setScrolled] = useState(!home)
   const [open, setOpen] = useState(false)
-  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
     setOpen(false)
@@ -20,11 +17,7 @@ export function Navbar() {
   }, [home, pathname])
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 24 || !home)
-      const max = document.documentElement.scrollHeight - window.innerHeight
-      setProgress(max > 0 ? window.scrollY / max : 0)
-    }
+    const onScroll = () => setScrolled(window.scrollY > 48 || !home)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -35,46 +28,68 @@ export function Navbar() {
     const panel = document.querySelector('.js-mobile-menu')
     const items = document.querySelectorAll('.js-mobile-link')
     if (!panel || !open) return
-    gsap.fromTo(panel, { yPercent: -100 }, { yPercent: 0, duration: 0.75, ease: 'power4.inOut' })
+    gsap.fromTo(panel, { yPercent: -8, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.55, ease: 'power3.out' })
     gsap.fromTo(
       items,
-      { y: 28, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.05, duration: 0.5, delay: 0.22, ease: 'power3.out' },
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.05, duration: 0.5, delay: 0.12, ease: 'power3.out' },
     )
     return () => {
       document.body.style.overflow = ''
     }
   }, [open])
 
+  const overHero = home && !scrolled && !open
+  const ink = !overHero
+
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50">
         <div
           className={cn(
-            'flex h-[4.5rem] items-center justify-between border-b px-4 transition-all duration-500 md:h-20 md:px-8',
-            scrolled || !home || open
-              ? 'border-cream/10 bg-forest-deep/92 backdrop-blur-md'
-              : 'border-transparent bg-transparent',
+            'grid h-[4.75rem] grid-cols-[1fr_auto] items-center px-5 transition-[background,box-shadow,height] duration-500 md:h-24 md:px-10 lg:grid-cols-[1fr_auto_1fr]',
+            overHero
+              ? 'bg-transparent'
+              : 'bg-cream/92 shadow-[0_1px_0_rgba(19,36,28,0.08)] backdrop-blur-md',
           )}
         >
           <Link
             to="/"
             data-cursor="ENTRAR"
             data-cursor-kind="link"
-            className="flex min-w-0 items-center gap-3 text-cream md:gap-4"
+            className={cn(
+              'flex min-w-0 items-center gap-3 md:gap-4',
+              ink ? 'text-forest' : 'text-cream drop-shadow-[0_2px_12px_rgba(19,36,28,0.45)]',
+            )}
           >
-            <BrandMark className="h-10 w-10 shrink-0 md:h-12 md:w-12" />
-            <span className="flex min-w-0 flex-col leading-none">
-              <span className="font-mono text-[8px] tracking-[0.38em] text-gold uppercase md:text-[9px]">
-                JF · Minas Gerais
-              </span>
-              <span className="mt-1.5 font-display text-[1.35rem] font-medium tracking-[0.04em] text-cream md:text-[1.85rem] md:tracking-[0.06em]">
+            <BrandMark
+              className="h-11 w-11 shrink-0 md:h-[3.25rem] md:w-[3.25rem]"
+              tone={ink ? 'dark' : 'light'}
+            />
+            <span className="min-w-0">
+              <span
+                className={cn(
+                  'block font-display text-[1.55rem] leading-none tracking-[0.02em] md:text-[2.05rem]',
+                  ink ? 'text-forest' : 'text-cream',
+                )}
+              >
                 Fazenda Ferrier
+              </span>
+              <span
+                className={cn(
+                  'mt-1.5 hidden text-[10px] tracking-[0.28em] uppercase sm:block',
+                  ink ? 'text-olive' : 'text-sand/90',
+                )}
+              >
+                Minas Gerais
               </span>
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-1 lg:flex" aria-label="Principal">
+          <nav
+            className="hidden items-center justify-center gap-9 lg:flex"
+            aria-label="Principal"
+          >
             {NAV_LINKS.map((link) => (
               <NavLink
                 key={link.to}
@@ -83,8 +98,13 @@ export function Navbar() {
                 data-cursor-kind="link"
                 className={({ isActive }) =>
                   cn(
-                    'px-3 py-2 font-mono text-[11px] tracking-[0.22em] text-cream/75 uppercase transition-colors hover:text-cream',
-                    isActive && 'text-gold',
+                    'relative text-[12px] tracking-[0.22em] uppercase transition-colors',
+                    ink
+                      ? 'text-forest/70 hover:text-forest'
+                      : 'text-cream drop-shadow-[0_2px_10px_rgba(19,36,28,0.4)] hover:text-cream',
+                    isActive && (ink ? 'text-forest' : 'text-cream'),
+                    isActive &&
+                      'after:absolute after:-bottom-2 after:left-0 after:h-px after:w-full after:bg-gold',
                   )
                 }
               >
@@ -93,40 +113,57 @@ export function Navbar() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
-            <span className="hidden font-mono text-[9px] tracking-[0.28em] text-sand/80 uppercase xl:inline">
-              MG · BR
-            </span>
-            <a
-              href="mailto:contato@fazendaferrier.com.br"
+          <div className="flex items-center justify-end gap-6">
+            <Link
+              to="/contato"
               data-cursor="ENTRAR"
               data-cursor-kind="link"
-              className="hidden border border-cream/20 px-3 py-1.5 font-mono text-[9px] tracking-[0.28em] text-cream uppercase transition-colors hover:border-gold hover:text-gold md:inline"
+              className={cn(
+                'hidden text-[12px] tracking-[0.22em] uppercase md:inline',
+                ink ? 'text-forest/80 hover:text-forest' : 'text-cream/85 hover:text-cream',
+              )}
             >
               Contato
-            </a>
-            <MagneticButton
+            </Link>
+            <button
               type="button"
               aria-label={open ? 'Fechar menu' : 'Abrir menu'}
               aria-expanded={open}
-              className="text-cream lg:hidden"
+              className={cn('relative h-5 w-7 lg:hidden', ink ? 'text-forest' : 'text-cream')}
               onClick={() => setOpen((value) => !value)}
             >
-              {open ? <X size={18} strokeWidth={1.4} /> : <Menu size={18} strokeWidth={1.4} />}
-            </MagneticButton>
+              <span
+                className={cn(
+                  'absolute left-0 h-px w-full bg-current transition-transform duration-300',
+                  open ? 'top-2 rotate-45' : 'top-0.5',
+                )}
+              />
+              <span
+                className={cn(
+                  'absolute top-2 left-0 h-px w-full bg-current transition-opacity duration-200',
+                  open && 'opacity-0',
+                )}
+              />
+              <span
+                className={cn(
+                  'absolute left-0 h-px w-full bg-current transition-transform duration-300',
+                  open ? 'top-2 -rotate-45' : 'top-[0.9rem]',
+                )}
+              />
+            </button>
           </div>
-        </div>
-        <div className="h-px w-full bg-cream/10">
-          <div className="h-px bg-gold origin-left" style={{ transform: `scaleX(${progress})` }} />
         </div>
       </header>
 
       {open ? (
-        <div className="js-mobile-menu fixed inset-0 z-40 bg-forest-deep text-cream">
-          <div className="scan pointer-events-none absolute inset-0 opacity-30" />
-          <div className="relative flex h-full flex-col justify-between px-7 pt-28 pb-12">
-            <nav className="flex flex-col gap-4" aria-label="Mobile">
-              <Link to="/" className="js-mobile-link font-display text-5xl" onClick={() => setOpen(false)}>
+        <div className="js-mobile-menu fixed inset-0 z-40 bg-cream text-forest">
+          <div className="flex h-full flex-col justify-between px-6 pt-28 pb-10">
+            <nav className="flex flex-col gap-5" aria-label="Mobile">
+              <Link
+                to="/"
+                className="js-mobile-link font-display text-5xl leading-none"
+                onClick={() => setOpen(false)}
+              >
                 Início
               </Link>
               {NAV_LINKS.map((link) => (
@@ -141,13 +178,13 @@ export function Navbar() {
               ))}
             </nav>
             <div>
-              <p className="mb-4 font-mono text-[10px] tracking-[0.32em] text-gold uppercase">Arquivo</p>
-              <div className="js-mobile-link flex flex-wrap gap-x-6 gap-y-2">
+              <p className="mb-3 text-[10px] tracking-[0.28em] text-olive uppercase">Mais</p>
+              <div className="js-mobile-link flex flex-wrap gap-x-5 gap-y-2">
                 {ARCHIVE_LINKS.map((link) => (
                   <Link
                     key={link.to}
                     to={link.to}
-                    className="font-mono text-[11px] tracking-[0.18em] text-sand uppercase"
+                    className="text-[12px] tracking-[0.16em] text-earth uppercase"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}
