@@ -28,9 +28,6 @@ export function Footer() {
           ))}
         </nav>
         <div className="flex flex-col gap-3 text-[13px] md:col-span-3">
-          <a href="https://jhenni.com.br" target="_blank" rel="noreferrer" className="text-cream/80 hover:text-cream">
-            jhenni.com.br
-          </a>
           <a href="mailto:contato@fazendaferrier.com.br" className="text-cream/80 hover:text-cream">
             contato@fazendaferrier.com.br
           </a>

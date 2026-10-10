@@ -71,12 +71,12 @@ export const chapters = {
     path: '/historia',
     kicker: 'A propriedade',
     title: 'Uma fazenda se constrói no chão, todos os dias.',
-    lead: 'A Fazenda Ferrier está em Minas Gerais. É terra de gado, granja e lavoura — conduzida com o mesmo critério: cuidado, ritmo e continuidade. Não há romance de vitrine. Há ofício.',
+    lead: 'A Fazenda Ferrier está em Minas Gerais. É terra de gado, granja e lavoura, conduzida com o mesmo critério: cuidado, ritmo e continuidade. Não há romance de vitrine. Há ofício.',
     lessons: [
       {
         index: '01',
         title: 'Três vocações, um nome',
-        body: 'Pecuária, granja e plantação pedem calendários diferentes e o mesmo respeito ao chão. Na Ferrier, as três convivem porque a terra comporta — e porque o manejo não mistura o que precisa ficar separado, como o fluxo da granja e o do pasto.',
+        body: 'Pecuária, granja e plantação pedem calendários diferentes e o mesmo respeito ao chão. Na Ferrier, as três convivem porque a terra comporta, e porque o manejo não mistura o que precisa ficar separado, como o fluxo da granja e o do pasto.',
       },
       {
         index: '02',
@@ -86,7 +86,7 @@ export const chapters = {
       {
         index: '03',
         title: 'A marca JF',
-        body: 'JF é a assinatura da casa. No campo, marca é responsabilidade — pelo animal, pela ave, pela lavoura e pela água. Não anuncia volume. Identifica o trabalho.',
+        body: 'JF é a assinatura da casa. No campo, marca é responsabilidade, pelo animal, pela ave, pela lavoura e pela água. Não anuncia volume. Identifica o trabalho.',
       },
       {
         index: '04',
@@ -97,13 +97,13 @@ export const chapters = {
     essays: [
       {
         title: 'O agro que a gente reconhece',
-        body: 'Pasto, granja e lavoura não são paisagem. São trabalho tropical: chuva, seca, sanidade, janela de plantio. A Ferrier se coloca nesse Brasil real — sem copiar fazenda de banco de imagens e sem vender tecnologia como espetáculo.',
+        body: 'Pasto, granja e lavoura não são paisagem. São trabalho tropical: chuva, seca, sanidade, janela de plantio. A Ferrier se coloca nesse Brasil real, sem copiar fazenda de banco de imagens e sem vender tecnologia como espetáculo.',
       },
     ],
     glossary: [
       { term: 'Vocação', def: 'O que o solo e o clima sustentam com qualidade, ano após ano.' },
       { term: 'Manejo', def: 'As decisões do dia: animal, planta, água e gente.' },
-      { term: 'Legado', def: 'Deixar a terra funcionando — não só o nome.' },
+      { term: 'Legado', def: 'Deixar a terra funcionando, não só o nome.' },
     ],
     aside: 'Fazenda Ferrier · Minas Gerais · JF',
     next: { to: '/terra', label: 'A terra' },
@@ -112,7 +112,7 @@ export const chapters = {
     path: '/terra',
     kicker: 'A terra',
     title: 'O chão decide o que a fazenda pode ser.',
-    lead: 'Antes da cerca e da máquina, existe o solo. Pastagem, lavoura, sombra e água têm lugar. Forçar o uso errado custa — e esgota. Na Ferrier, o primeiro ofício é ler o terreno.',
+    lead: 'Antes da cerca e da máquina, existe o solo. Pastagem, lavoura, sombra e água têm lugar. Forçar o uso errado custa, e esgota. Na Ferrier, o primeiro ofício é ler o terreno.',
     image: media.terra,
     lessons: [
       {
@@ -139,7 +139,7 @@ export const chapters = {
     essays: [
       {
         title: 'Paisagem com função',
-        body: 'Cerca, sombra e estrada organizam o gado e a gente. Uma propriedade bem conduzida trata o chão como planta baixa: cada metro tem fluxo. A beleza vem depois — de terra cuidada, não de filtro.',
+        body: 'Cerca, sombra e estrada organizam o gado e a gente. Uma propriedade bem conduzida trata o chão como planta baixa: cada metro tem fluxo. A beleza vem depois, de terra cuidada, não de filtro.',
       },
     ],
     glossary: [
@@ -154,7 +154,7 @@ export const chapters = {
     path: '/rebanho',
     kicker: 'O rebanho',
     title: 'Gado no pasto, no tempo certo.',
-    lead: 'Na Fazenda Ferrier o rebanho vive no campo. Cria, recria e engorda pedem capim, sombra, água e olho no lote. Pecuária de verdade é ritmo — não retrato.',
+    lead: 'Na Fazenda Ferrier o rebanho vive no campo. Cria, recria e engorda pedem capim, sombra, água e olho no lote. Pecuária de verdade é ritmo, não retrato.',
     image: media.rebanho,
     lessons: [
       {
@@ -165,7 +165,7 @@ export const chapters = {
       {
         index: '02',
         title: 'Capim é cultura',
-        body: 'Lotação, descanso, reforma. Campo degradado não é “natural”: é falha de cuidado. O bovino converte pasto em proteína — por isso o chão pesa tanto quanto o curral.',
+        body: 'Lotação, descanso, reforma. Campo degradado não é “natural”: é falha de cuidado. O bovino converte pasto em proteína, por isso o chão pesa tanto quanto o curral.',
       },
       {
         index: '03',
@@ -217,13 +217,13 @@ export const chapters = {
       {
         index: '04',
         title: 'Dois tempos na mesma terra',
-        body: 'O gado é lento. A ave é curta. A fazenda que tem os dois não mistura fluxo. Granja e pasto se respeitam — e a mesma equipe precisa dos dois relógios.',
+        body: 'O gado é lento. A ave é curta. A fazenda que tem os dois não mistura fluxo. Granja e pasto se respeitam, e a mesma equipe precisa dos dois relógios.',
       },
     ],
     essays: [
       {
         title: 'Precisão sem palco',
-        body: 'Alarme, registro, higiene da linha de água. O que importa na granja funciona de madrugada, sem parecer ficção. Na Ferrier, a granja é vocação — tão casa quanto o curral.',
+        body: 'Alarme, registro, higiene da linha de água. O que importa na granja funciona de madrugada, sem parecer ficção. Na Ferrier, a granja é vocação, tão casa quanto o curral.',
       },
     ],
     glossary: [
@@ -249,7 +249,7 @@ export const chapters = {
       {
         index: '02',
         title: 'Esperar a janela',
-        body: 'Plantio e colheita obedecem ao clima. Ler o ano — chuva, seca, geada — é o ofício. Quem planta contra a estação paga duas vezes.',
+        body: 'Plantio e colheita obedecem ao clima. Ler o ano, chuva, seca e geada, é o ofício. Quem planta contra a estação paga duas vezes.',
       },
       {
         index: '03',
@@ -259,7 +259,7 @@ export const chapters = {
       {
         index: '04',
         title: 'Ferramenta depois da pergunta',
-        body: 'Mapa, máquina, taxa. Servem se a pergunta foi certa. A Ferrier usa o que o talhão pede — sem transformar a lavoura em vitrine de equipamento.',
+        body: 'Mapa, máquina, taxa. Servem se a pergunta foi certa. A Ferrier usa o que o talhão pede, sem transformar a lavoura em vitrine de equipamento.',
       },
     ],
     essays: [
@@ -280,7 +280,7 @@ export const chapters = {
     path: '/metodo',
     kicker: 'O método',
     title: 'Ver, anotar, decidir, repetir.',
-    lead: 'Na Fazenda Ferrier o método é presença. Andar, olhar, registrar. Depois, se couber, o dado. Tecnologia entra para servir o ofício — nunca para encenar o campo.',
+    lead: 'Na Fazenda Ferrier o método é presença. Andar, olhar, registrar. Depois, se couber, o dado. Tecnologia entra para servir o ofício, nunca para encenar o campo.',
     lessons: [
       {
         index: '01',
@@ -300,13 +300,13 @@ export const chapters = {
       {
         index: '04',
         title: 'Juntar só o que a terra aguenta',
-        body: 'Integrar lavoura e gado é decisão. Separar a granja é outra. Método é o critério — não a palavra da vez.',
+        body: 'Integrar lavoura e gado é decisão. Separar a granja é outra. Método é o critério, não a palavra da vez.',
       },
     ],
     essays: [
       {
-        title: 'Duas casas, um critério',
-        body: 'Jhenni Nascimento traz da engenharia o hábito de mapear. Na fazenda, mapear é cuidar: ciclo, manejo, calendário. O outro trabalho — sistemas e IA — vive em jhenni.com.br. Aqui, o chão manda.',
+        title: 'Um critério só',
+        body: 'Na fazenda, mapear é cuidar: ciclo, manejo, calendário. Tecnologia entra se o ofício pede. O chão manda.',
       },
     ],
     glossary: [
@@ -383,7 +383,7 @@ export const chapters = {
       {
         index: '04',
         title: 'Onde aparece',
-        body: 'Onde o trabalho pede assinatura. O restante é a terra — sempre o protagonista.',
+        body: 'Onde o trabalho pede assinatura. O restante é a terra, sempre o protagonista.',
       },
     ],
     essays: [
@@ -403,59 +403,59 @@ export const chapters = {
   origem: {
     path: '/origem',
     kicker: 'A origem',
-    title: 'Quem cuida da terra também constrói sistemas.',
-    lead: 'Jhenni Nascimento conduz a Fazenda Ferrier. Engenheira, sócia da AIIDO, mente da primeira IA de cobrança via Pix Automático do Brasil — e presença no pasto, na granja e na lavoura. Os dois ofícios pedem o mesmo: mapear e persistir.',
+    title: 'Minas. Três ofícios. Um nome na porteira.',
+    lead: 'A Fazenda Ferrier está em Minas Gerais. Gado, granja e lavoura no mesmo chão. A origem da casa é essa vocação, não um retrato de quem conduz.',
     lessons: [
       {
         index: '01',
         title: 'A fazenda',
-        body: 'Gado, granja e plantação em Minas Gerais. Aqui o critério é o chão. A precisão que Jhenni usa em sistemas se vira para o que não se substitui: animal, ave, safra.',
+        body: 'Pecuária, granja e plantação. O critério é o chão: animal, ave e safra pedem o mesmo respeito e calendários diferentes.',
       },
       {
         index: '02',
-        title: 'Mapear para cuidar',
-        body: '“Se pode ser mapeado, pode ser automatizado. Se gera dados, pode ser inteligente.” No campo, mapear é outra coisa: ver o ciclo, anotar o manejo, não improvisar o que a terra já mostrou.',
+        title: 'O que permanece',
+        body: 'Ver o ciclo, anotar o manejo, não improvisar o que a terra já mostrou. Origem, aqui, é o ofício que se repete.',
       },
       {
         index: '03',
         title: 'Este site é a terra',
-        body: 'Não é portfólio de tecnologia. É a casa rural. Inteligência entra como rigor — rotina, rastreio, calendário — sem estética de startup no capim.',
+        body: 'A casa rural. Rotina, rastreio, calendário. Sem estética de vitrine no capim.',
       },
       {
         index: '04',
-        title: 'O outro endereço',
-        body: 'Engenharia, IA e empresas: jhenni.com.br e aiido.com.br. A Ferrier fica aqui. Os dois se falam porque a mesma pessoa responde pelos dois.',
+        title: 'A assinatura',
+        body: 'JF marca o trabalho da Ferrier. Identifica a propriedade. Não compete com o horizonte.',
       },
     ],
     essays: [
       {
-        title: 'DRE e chuva',
-        body: 'O agro pede quem entenda conta e estação, servidor e bezerro. Jhenni transita. Continuidade é o nome do ofício dos dois lados da porteira.',
+        title: 'Continuidade',
+        body: 'O agro pede conta e estação, pasto e janela de plantio. Continuidade é o nome do ofício deste lado da porteira.',
       },
     ],
     glossary: [
-      { term: 'AIIDO', def: 'Engenharia de IA — o outro território.' },
       { term: 'Ferrier', def: 'A terra, o gado, a granja, a lavoura.' },
+      { term: 'JF', def: 'A marca da casa.' },
       { term: 'MG', def: 'Minas Gerais. O chão desta assinatura.' },
     ],
-    aside: 'Jhenni Nascimento · Fazenda Ferrier · Minas Gerais',
+    aside: 'Fazenda Ferrier · Minas Gerais',
     next: { to: '/contato', label: 'Contato' },
   },
   contato: {
     path: '/contato',
     kicker: 'Contato',
     title: 'Fale com a fazenda.',
-    lead: 'A Fazenda Ferrier fica em Minas Gerais. Para conversa institucional, parceria ou imprensa, o caminho é o e-mail da casa. Engenharia e sistemas seguem em jhenni.com.br.',
+    lead: 'A Fazenda Ferrier fica em Minas Gerais. Para conversa institucional, parceria ou imprensa, o caminho é o e-mail da casa.',
     lessons: [
       {
         index: '01',
         title: 'Onde estamos',
-        body: 'Minas Gerais · Brasil. A fazenda é rural: pecuária, granja e lavoura. Visita e local combinam-se pela conversa — não por anúncio genérico.',
+        body: 'Minas Gerais · Brasil. A fazenda é rural: pecuária, granja e lavoura. Visita e local combinam-se pela conversa, não por anúncio genérico.',
       },
       {
         index: '02',
         title: 'Como escrever',
-        body: 'contato@fazendaferrier.com.br. Assuntos da propriedade neste endereço. IA, produtos e engenharia: jhenni.com.br e aiido.com.br.',
+        body: 'contato@fazendaferrier.com.br. Assuntos da propriedade neste endereço.',
       },
       {
         index: '03',
@@ -470,13 +470,13 @@ export const chapters = {
     ],
     essays: [
       {
-        title: 'Dois portões',
-        body: 'Quem chega pela fazenda encontra o campo. Quem chega pela engenharia encontra a AIIDO. O critério é o mesmo: trabalho que permanece.',
+        title: 'A porteira',
+        body: 'Quem chega encontra o campo. Terra, manejo, marca. Trabalho que permanece.',
       },
     ],
     glossary: [
       { term: 'Institucional', def: 'Fala da fazenda, da marca e do ofício.' },
-      { term: 'AIIDO', def: 'O outro território, outro site.' },
+      { term: 'Casa', def: 'A propriedade. Não é pacote de visita.' },
       { term: 'E-mail', def: 'contato@fazendaferrier.com.br' },
     ],
     aside: 'contato@fazendaferrier.com.br · Minas Gerais · Brasil',

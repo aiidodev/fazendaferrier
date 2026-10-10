@@ -71,7 +71,7 @@ export function HomePage() {
             vira legado.
           </h1>
           <p className="mt-8 max-w-lg text-lg leading-relaxed text-cream drop-shadow-[0_4px_18px_rgba(19,36,28,0.5)] md:text-xl">
-            Fazenda Ferrier. Gado, granja e lavoura — uma propriedade conduzida com o ritmo do campo.
+            Fazenda Ferrier. Gado, granja e lavoura, uma propriedade conduzida com o ritmo do campo.
           </p>
         </div>
         <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-3 text-cream/70">
@@ -97,8 +97,8 @@ export function HomePage() {
             ave e terra com o mesmo respeito.
           </p>
           <p className="text-base leading-[1.85] text-earth">
-            A casa é conduzida por Jhenni Nascimento. O critério é simples: ver o chão, cuidar do ciclo,
-            deixar continuidade. A marca JF assina o que se faz — sem gritar sobre o horizonte.
+            O critério é simples: ver o chão, cuidar do ciclo, deixar continuidade. A marca JF assina o
+            que se faz, sem gritar sobre o horizonte.
           </p>
         </div>
       </section>
@@ -149,7 +149,7 @@ export function HomePage() {
       <section className="bg-forest-deep px-6 py-24 text-cream md:px-12 md:py-32 lg:px-20">
         <h2 className="font-display text-4xl md:text-6xl">A propriedade</h2>
         <p className="mt-6 max-w-xl text-sand/80">
-          História, método, água, marca e origem — o restante da casa, além do menu.
+          História, método, água, marca e origem, o restante da casa, além do menu.
         </p>
         <div className="mt-14 divide-y divide-cream/15 border-y border-cream/15">
           {ATLAS_LINKS.map((link) => (

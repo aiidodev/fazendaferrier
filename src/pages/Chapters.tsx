@@ -34,28 +34,13 @@ export function MarcaPage() {
 }
 
 export function OrigemPage() {
-  return (
-    <ChapterFrame chapter={chapters.origem}>
-      <p className="mt-16">
-        <a
-          href="https://jhenni.com.br"
-          target="_blank"
-          rel="noreferrer"
-          data-cursor="DESCUBRA"
-          data-cursor-kind="link"
-          className="text-[12px] tracking-[0.22em] text-gold uppercase"
-        >
-          jhenni.com.br
-        </a>
-      </p>
-    </ChapterFrame>
-  )
+  return <ChapterFrame chapter={chapters.origem} />
 }
 
 export function ContatoPage() {
   return (
     <ChapterFrame chapter={chapters.contato} inverted>
-      <p className="mt-16 flex flex-wrap gap-8">
+      <p className="mt-16">
         <a
           href="mailto:contato@fazendaferrier.com.br"
           className="text-[12px] tracking-[0.2em] text-gold uppercase"
@@ -63,14 +48,6 @@ export function ContatoPage() {
           data-cursor-kind="link"
         >
           contato@fazendaferrier.com.br
-        </a>
-        <a
-          href="https://jhenni.com.br"
-          target="_blank"
-          rel="noreferrer"
-          className="text-[12px] tracking-[0.2em] text-gold uppercase"
-        >
-          jhenni.com.br
         </a>
       </p>
     </ChapterFrame>
